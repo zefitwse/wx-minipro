@@ -1,0 +1,58 @@
+<view class="date">
+  <view>前一天</view>
+  <view bindtap='selectTime'>{{date}} △</view>
+  <view>后一天</view>
+</view>
+
+<view class="content" sytle="height:{{winHeight}}px">
+  <block wx:for="{{trainList}}" wx:key="*" >
+    <view class="bg" data-id="{{item._id}}" data-trainNum="{{item.trainNum}}" bindtap="goDetail" >
+      <view class="item">
+        <view class="wrApper left">
+          <view class="time">{{item.startTime}} {{aaa[index]}}</view>
+          <view class="normal">{{item.startSta}}</view>
+        </view>
+
+        <view class="wrApper center">
+          <view class="time">{{item.trainNum}}</view>
+          <view class="line"></view>
+          <view class="small">{{item.costTime}}</view>
+        </view>
+
+        <view class="wrApper right">
+          <view class="time">{{item.endTime}}</view>
+          <view class="normal">{{item.endSta}}</view>
+        </view>
+
+        <view class="wrApper right">
+          <view class="blue">{{item.softPrice}}￥</view>
+          <view class="buy">
+            可买票
+            <form bindsubmit='bindTicket'>
+
+              <input name='id' value='{{item.id}}' disabled='true' />
+              <button class='btn' form-type='submit' style='width:80px;height:5px'></button>
+            </form>
+
+          </view>
+        </view>
+      </view>
+      <view class="hr"></view>
+      <view class="seat">
+        <view class="yes">特等座：{{item.seat0}}张</view>
+        <view class="yes">一等座：{{item.seat1}}张</view>
+        <view class="yes">二等座：{{item.seat2}}张</view>
+      </view>
+    </view>
+  </block>
+  <!-- <view class="bottomNav">
+    <view id="特" class="{{currentTab==0?'selected':'common'}}" bindtap='switchNav'>筛选</view>
+    <view style="color:#ffffff">|</view>
+    <view id="1" class="{{currentTab==1?'selected':'common'}}" bindtap='switchNav'>出发时间</view>
+    <view style="color:#ffffff">|</view>
+    <view id="2" class="{{currentTab==2?'selected':'common'}}" bindtap='switchNav'>旅行时间</view>
+    <view style="color:#ffffff">|</view>
+    
+
+  </view> -->
+</view>

@@ -1,0 +1,162 @@
+
+.date{
+  height: 40px;
+  background-color: #5495E6;
+  display: flex;
+  flex-direction: row;
+  }
+
+  .date view{
+    margin: 0 auto;
+    color:#ffffff;
+    padding-top: 10px
+  }
+.seat1{
+
+  display: flex;
+  justify-content:space-around;
+}
+ .seat{
+  color: rgba(0, 0, 0, 0);
+   height: 16px;
+ }
+  .content{
+    height: 600px;
+    background-color: #f4f4f4;
+    padding-top: 10px;
+  }
+  .bg{
+    width: 95%;
+    height: 120px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .item{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .wrApper{
+    width: 25%;
+    }
+
+    .left{
+      text-align: left;
+    }
+    .center{
+      text-align: center;
+    }
+    .right{
+      text-align: right;
+      }
+      
+      .blue{
+        color: #5495E6;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .normal{
+        margin-top: 35rpx;
+        color:#000000;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .small{
+
+        font-size: 13px;
+        color:#666666;
+      }
+      .line{
+        height: 1px;
+        background-color: #cccccc;
+        opacity: 0.2;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+
+      .buy{
+        margin-top: 30rpx;
+        background-color: rgba(54, 156, 214, 0.911);
+        width: 70px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color:#ffffff;
+        text-align: center;
+        float:right;
+        border-radius: 6px;
+        margin-right: 5px;
+      }
+
+      .hr{
+        height: 1px;
+        background-color: #cccccc;
+        opacity: 0.2
+      }
+
+      .seat{
+        font-size: 13px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+
+      .seat text{
+
+        color:red;
+      }
+
+      .no{
+        color:#999999;
+        margin-right: 10px;
+      }
+      .yes{
+        margin-left: 10px;
+      }
+
+      /* 火车票筛选样式 */
+      .bottomNav{
+        background-color: #505963;
+        display: flex;
+        flex-direction: row;
+        height: 45px;
+        line-height: 45px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+      }
+
+      .bottomNav view{
+        margin:0 auto
+      }
+
+      .selected{
+        font-size: 13px;
+        color:#5495E6;
+      }
+
+      .common{
+        font-size: 13px;
+        color:#ffffff;
+      }
+
+      .btn{
+  width:90%;
+  height: 45px;
+  line-height: 45px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  }

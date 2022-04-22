@@ -1,0 +1,26 @@
+.box{
+  margin: 0 auto;
+  height: 250rpx;
+  width: 80%;
+  border: 1px solid rgba(168, 163, 163, 0.89);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+}
+.box view{
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+
+.change{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10rpx;
+
+}
+button{
+  height: 50rpx;
+  margin-bottom: 10rpx;
+  line-height: 50rpx;
+}

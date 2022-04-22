@@ -1,0 +1,21 @@
+.bgc{
+ height: 150rpx;
+ display: flex;
+ justify-content: center;
+}
+image{
+  padding-top: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+
+}
+.mess{
+  margin-top: 150rpx;
+ text-align: center;
+ height: 160rpx;
+ border-bottom: 1px solid rgba(110, 104, 104, 0.712);
+}
+button{
+  margin-top: 150rpx;
+  width: 80%;
+}

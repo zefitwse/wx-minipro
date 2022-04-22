@@ -1,0 +1,32 @@
+
+<view class="infoList">
+
+  <view class="divLine"></view>
+  <view class="row">
+    <text class="left">用户名:</text>
+    <text class="right">{{user[0].username}}</text>
+  </view>
+  <view class="divLine"></view>
+
+  <view class="row">
+    <text class="left">证件号码:</text>
+    <text class="right">{{user[0].userID}}</text>
+  </view>
+  <view class="divLine"></view>
+
+  <view class="row">
+    <text class="left">类别:</text>
+    <text class="right">身份证</text>
+  </view>
+  <view class="divLine"></view>
+
+  <view class="row">
+    <text class="left">手机号码:</text>
+    <text class="right">{{user[0].mobile}}</text>
+  </view>
+  <view class="divLine"></view>
+  <button bindtap="exit" class="btn">退出登录</button>
+</view>
+
+
+

@@ -1,0 +1,3 @@
+<!--pages/ceshi.wxml-->
+<text>pages/ceshi.wxml</text>
+<button bindtap="ceshi">aaa</button>

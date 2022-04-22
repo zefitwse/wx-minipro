@@ -1,0 +1,165 @@
+page{
+  height: 100%;
+}
+.body{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.head{
+  height: 50%;
+  display: flex;
+  /* border: 1px solid black; */
+}
+.head swiper{ 
+  height: 300rpx;
+  width: 100%;
+}
+image{
+  height: 100%;
+  width: 100%;
+}
+.leg{
+  position: absolute;
+  top: 200rpx;
+  height: 400rpx;
+  width: 94%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 3px 3px 3px 3px rgba(161,161,156,0.25);
+  font-size: 30rpx;
+}
+.leg form{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-color: rgba(211, 163, 163, 0.829);
+}
+form view{
+  display: flex;
+  width: 100%;
+}
+form :nth-child(1){
+  height: 130rpx;
+}
+form :nth-child(2){
+  height: 100rpx;
+}
+form :nth-child(3){
+  height: 160rpx;
+}
+.leg .date{
+  border-top: 1px solid rgba(161,161,156,0.25);
+  border-bottom: 1px solid rgba(161,161,156,0.25);
+}
+.positon{
+  display: flex;
+}
+.positon view{
+justify-content: space-around;
+ display: flex;
+ height: 100%;
+ align-items: center;
+}
+checkbox-group{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.positon input{
+  
+  text-align: center;
+  font-size: 40rpx;
+  
+}
+.date input{
+  align-items: center;
+  font-size: 40rpx;
+ text-align: center;
+ width: 100%;
+}
+.check{
+  display: flex;
+  flex-direction: column;
+
+}
+/* 按钮 */
+button{ 
+ flex: 1;
+ background-color: cornflowerblue;
+ width: 80%;
+ color: cornsilk;
+ align-items: center;
+ justify-content: center;
+
+}
+.check view{
+  overflow: hidden;
+  height: 50rpx;
+  justify-content: space-around;
+}
+.check view :nth-child(1){
+  height: 100%;
+}
+.check view :nth-child(2){
+  height: 100%;
+}
+
+.minBox{
+ 
+  margin-top: 50rpx;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.minBox view{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  /* border-top: 1px solid  rgba(83, 143, 233,0.5); */
+  color:#3b84d6;
+  font-size:100rpx;
+  flex-direction: column;
+} 
+.zizi{
+  display: flex;
+
+  width: 200rpx;
+}
+/* .Ad{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Ad :nth-child(1){
+  height: 70rpx;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+#p1{
+ 
+  font-size: 50rpx;
+  text-align: 50rpx;
+}
+#p2{
+  font-size: 35rpx;
+  text-align: 50rpx;
+}
+.Ad .p2{
+  flex: 1;
+  /* border-top: 1px solid  rgba(83, 143, 233,0.5); */
+  /* background-color: rgba(161, 161, 161, 0.288); */
+/* } */ 

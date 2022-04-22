@@ -1,0 +1,36 @@
+<view class="content" sytle="height:{{winHeight}}px">
+  <block wx:for="{{orderTicket}}" wx:key="1">
+  <view class="bg" bindtap="check" data-seatBit="{{item.seatBit}}" data-id="{{item._id}}" data-trainid="{{item.trainID}}"data-jideng="{{item.jideng}}"  >
+    <view class="item" >
+      <view class="wrApper left">
+          <view class="time">{{item.startTime}}</view>
+          <view class="normal">{{item.startSta}}</view>
+        </view>
+
+        <view class="wrApper center">
+          <view class="time">{{item.trainNum}}</view>
+          <view class="line"></view>
+          <view class="small">————></view>
+          <view class="time">{{item.date}}</view>
+        </view>
+
+        <view class="wrApper right">
+          <view class="time">{{item.endTime}}</view>
+          <view class="normal">{{item.endSta}}</view>
+        </view>
+
+      <view class="wrApper right">
+        <view class="buy" >
+         查看详情
+        </view>
+      </view>
+    </view>
+    <view class="hr"></view>
+    <view class="seat1" style="opacity:unset;" >
+    <view class="seat">座位：{{item.seat}}</view>
+    <view class="seat">车厢：{{item.xiang}}</view>
+    <view class="seat"> {{item.jideng}}等座</view>
+  </view>
+  </view>
+  </block>
+</view>

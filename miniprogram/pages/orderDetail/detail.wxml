@@ -1,0 +1,10 @@
+<view class="box">
+  <view class>座位号：{{r}}排{{c}}座</view>
+  <view class>箱号：{{jixiang}}</view>
+  <view>检票口：aaa</view>
+  <view class="change">   
+  <button bindtap="tuipiao" type="warn" class="container" style="float: left;">退票</button>
+  <button bindtap="gaiqian" type="warn" class="container" style="float: left;">改签</button>
+  </view>
+
+</view>

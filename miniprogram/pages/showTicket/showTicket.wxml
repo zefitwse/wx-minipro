@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="pannel flight">
+
+    <view class="backFlight">
+      <view class="flightDate">
+        <view>
+          <text class="time">{{trainList[0].startTime}}</text>
+          <text>{{trainList[0].startSta}}</text>
+        </view>
+
+        <view>
+          <text class="date">{{trainList[0].date}}</text>
+          <text class="date">————></text>
+          <text class="date">{{trainList[0].costTime}}</text>
+        </view>
+
+        <view>
+          <text class="time">{{trainList[0].endTime}}</text>
+          <text>{{trainList[0].endSta}}</text>
+        </view>
+
+      </view>
+
+    <view>————————————————————</view>
+
+    <view class="goFlight">
+        <view class="{{index=='特'?'choose':'nochoose'}}" bindtap="changeCol" data-index="特">特等:￥{{trainList[0].softPrice}}</view>
+        <view class="{{index=='1'?'choose':'nochoose'}}" bindtap="changeCol3" data-index="1">一等:￥{{trainList[0].softPrice}}</view>
+        <view class="{{index=='2'?'choose':'nochoose'}}" bindtap="changeCol4" data-index="2">二等:￥{{trainList[0].softPrice}}</view>
+    </view>
+
+    <view class="seat"> 
+        <div>窗</div>
+        <view class="{{index2=='a'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="a">a</view>
+        <view class="{{index2=='b'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="b" style="display:{{flagb}}">b</view>
+        <view class="{{index2=='c'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="c">c</view>
+        <div >过道</div>
+        <view class="{{index2=='d'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="d" style="display:{{flagd}}" >d</view>
+        <view class="{{index2=='f'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="f">f</view>
+        <div>窗</div>
+    </view>
+  </view>
+
+
+
+  <view class="tabBar">
+
+    <text class="totalPrice">价格￥：{{price}}</text>
+    <text class="priceDetail">费用明细</text>
+    <view class="nextStep" bindtap="submit" data-id="{{trainList[0]._id}}" data-index2="{{index2}}" data-index="{{index}}">支付</view>
+  </view>
+</view>
+</view>

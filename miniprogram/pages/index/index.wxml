@@ -1,0 +1,8 @@
+<view class="bgc">
+  <image src="../../images/bar/qcp-0.jpg"></image>
+</view>
+<view class="mess">
+  <view>申请获取您的信息</view>
+  <view>（包括您的头像，性别，手机号等）</view>
+</view>
+<view><button type="primary" bindtap="login">授权登录</button></view>

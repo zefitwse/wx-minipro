@@ -1,0 +1,78 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/home/home",
+          "query": "date=\"06-24\"",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户名注册",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "选择注册方式",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "账号登录",
+          "pathName": "pages/userLogin/accountLogin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "info=G2575%2006-24%20%E5%AE%BF%E8%BF%81%E5%B8%82%20%E7%9B%90%E5%9F%8E%E5%B8%82%201%20c&username=",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/showTicket/showTicket",
+          "query": "id=00000000000000000000000000000001",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/ceshi",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

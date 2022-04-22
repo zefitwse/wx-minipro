@@ -1,0 +1,81 @@
+
+<view class="amountBg">
+<!-- 头像 -->
+  <view class="img">
+    <image src="{{toux}}" style="width:49px;height:55px;"></image>
+  </view>
+<!-- 个人信息 -->
+  <view class="account">
+    <view>{{name}}</view>
+    <view bindtap="shiming">{{username}}</view>
+  </view>
+
+  <view class="nav"></view>
+</view>
+
+<!-- 订单列表 -->
+<view class="content">
+  <view class="order">
+    <view class="desc">
+      <view>
+        <image src="../../images/icon/grzx/qbdd.jpg" style="width:22px;  height:25px;"></image>
+      </view>
+      <view bindtap='orderTap'>全部订单</view>
+    </view>
+
+  </view>
+
+  <!-- 列表导航设计 -->
+<view class="clear"></view>
+
+
+<view class="line"></view>
+
+
+
+<view class="hr"></view>
+
+
+<view class="item">
+<view class="icon"><image src="../../images/icon/grzx/yqhy.jpg" style="width:22px;height:21px;"></image></view>
+<view class="itemName">
+<view>邀请好友</view>
+</view>
+<button  bindtap='share' class="opr" open-type="share">分享好友></button>
+</view>
+
+<view class="hr"></view>
+
+
+<view class="item">
+<view class="icon"><image src="../../images/icon/grzx/xxzx.jpg" style="width:22px;height:21px;"></image></view>
+<view class="itemName">
+<view>我的客服</view>
+</view>
+<button class="opr" open-type="contact">联系客服></button>
+</view>
+
+<view class="hr"></view>
+
+<view class="item">
+<view class="icon"><image src="../../images/icon/grzx/cpyj.jpg" style="width:22px;height:21px;"></image></view>
+<view class="itemName">
+<view>产品意见</view>
+</view>
+
+<button class="opr" open-type="feedback">意见反馈></button> 
+
+</view>
+
+<view class="hr"></view>
+
+
+<view class="item" bindtap="goset">
+<view class="icon"><image src="../../images/icon/grzx/gd.jpg" style="width:22px;height:21px;"></image></view>
+<view class="itemName">
+<view >设置</view>
+</view>
+<view class="right">></view>
+</view>
+</view>
+
