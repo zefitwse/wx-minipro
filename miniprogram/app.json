@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/toPay/pay",
+    "pages/Pay/pay",
     "pages/login/login",
     "pages/home/home",
     "pages/ticket/ticket",
@@ -10,12 +10,23 @@
     "pages/userinfo/userinfo",
     "pages/mine/mine",
     "pages/switchcity/switchcity",
+    "pages/switchcity2/switchcity2",
     "pages/register/register",
     "pages/userLogin/accountLogin",
     "pages/showTicket/showTicket",
     "pages/orderDetail/detail",
     "pages/ceshi",
-    "pages/gaiqian/gaiqian"
+    "pages/gaiqian/gaiqian",
+    "pages/realgai/realgai",
+    "pages/chifan/chifan",
+    "pages/food/food",
+    "pages/hotel/jiudian",
+    "pages/out/out",
+    "pages/foodorder/foodorder",
+    "pages/admin/admin",
+    "pages/houchu/houchu",
+    "pages/faceEntry/faceEntry",
+    "pages/reset/reset"
   ],
   "sitemapLocation": "sitemap.json",
   "window": {

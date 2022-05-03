@@ -21,33 +21,109 @@
 
       </view>
 
-    <view>————————————————————</view>
+      <view>————————————————————</view>
 
-    <view class="goFlight">
-        <view class="{{index=='特'?'choose':'nochoose'}}" bindtap="changeCol" data-index="特">特等:￥{{trainList[0].softPrice}}</view>
-        <view class="{{index=='1'?'choose':'nochoose'}}" bindtap="changeCol3" data-index="1">一等:￥{{trainList[0].softPrice}}</view>
-        <view class="{{index=='2'?'choose':'nochoose'}}" bindtap="changeCol4" data-index="2">二等:￥{{trainList[0].softPrice}}</view>
-    </view>
+      <view class="goFlight">
+        <view class="{{index=='特'?'choose':'nochoose'}}" bindtap="changeCol" data-index="特" data-price="{{trainList[0].dcprice}}" >特等:￥{{trainList[0].dcprice}}</view>
+        <view class="{{index=='1'?'choose':'nochoose'}}" bindtap="changeCol3" data-index="1" data-price="{{trainList[0].price1}}">一等:￥{{trainList[0].price1}}</view>
+        <view class="{{index=='2'?'choose':'nochoose'}}" bindtap="changeCol4" data-index="2" data-price="{{trainList[0].price2}}">二等:￥{{trainList[0].price2}}</view>
+      </view>
 
-    <view class="seat"> 
+      <view class="seat">
         <div>窗</div>
         <view class="{{index2=='a'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="a">a</view>
         <view class="{{index2=='b'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="b" style="display:{{flagb}}">b</view>
         <view class="{{index2=='c'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="c">c</view>
-        <div >过道</div>
-        <view class="{{index2=='d'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="d" style="display:{{flagd}}" >d</view>
+        <div>过道</div>
+        <view class="{{index2=='d'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="d" style="display:{{flagd}}">d</view>
         <view class="{{index2=='f'?'choose':'nochoose'}}" bindtap="changeCol2" data-index="f">f</view>
         <div>窗</div>
+      </view>
+    </view>
+
+
+
+    <view class="tabBar">
+
+      <text wx:if="{{status=='xs'}}" class="totalPrice">学生价格￥：{{totalprice*0.75}}</text>
+      <text wx:elif="{{status=='tuan'}}" class="totalPrice">团购价格￥：{{totalprice*0.85}}</text>
+      <text wx:else="{{status=='pt'}}"   class="totalPrice">普通价格￥：{{totalprice}}</text>
+
+      <view class="nextStep" bindtap="submit" data-id="{{trainList[0]._id}}" data-index2="{{index2}}" data-index="{{index}}">下单</view>
     </view>
   </view>
+</view>
+<!-- 添加第二名乘客 -->
+<view  class="container2">
+  <view class="zhuijia">
+    <view>是否添加第二位乘客</view>
+    <view class="ren" style="display: flex; flex-direction: column">
+    
+    <view >
+      <span bindtap="jiaren">+</span>
+      <span bindtap="jianren">-</span>
+    </view>
 
-
-
-  <view class="tabBar">
-
-    <text class="totalPrice">价格￥：{{price}}</text>
-    <text class="priceDetail">费用明细</text>
-    <view class="nextStep" bindtap="submit" data-id="{{trainList[0]._id}}" data-index2="{{index2}}" data-index="{{index}}">支付</view>
+    <view   wx:if="{{jiaren1=='true'}}" style="display: flex; flex-direction: row">
+        <view class="queren1" bindtap="queren1"  data-id="{{trainList[0]._id}}" data-index2="{{index3}}" data-index="{{index}}">确认</view >
+        <view class="queren1" bindtap="quxiao" data-name="{{username2}}">取消</view >
+      </view> 
   </view>
 </view>
+  
+  <view wx:if="{{jiaren1=='true'}}" >
+    <input value="{{username2}}" placeholder="请输入乘客名" bindinput="input1"/>
+    <input value="{{userid2}}" placeholder="请输入身份证号" bindinput="input2"/>
+    <view class="seat" style="margin-bottom: 15rpx;">
+      <div>窗</div>
+      <view class="{{index3=='a'?'choose':'nochoose'}}" bindtap="changeCol33" data-index="a">a</view>
+      <view class="{{index3=='b'?'choose':'nochoose'}}" bindtap="changeCol33" data-index="b" style="display:{{flagb}}">b</view>
+      <view class="{{index3=='c'?'choose':'nochoose'}}" bindtap="changeCol33" data-index="c">c</view>
+      <div>过道</div>
+      <view class="{{index3=='d'?'choose':'nochoose'}}" bindtap="changeCol33" data-index="d" style="display:{{flagd}}">d</view>
+      <view class="{{index3=='f'?'choose':'nochoose'}}" bindtap="changeCol33" data-index="f">f</view>
+      <div>窗</div>
+    </view>
+  </view>
+</view>
+<!-- 添加第三名乘客 -->
+<view  class="container2">
+  <view class="zhuijia">
+    <view>是否添加第三位乘客</view>
+    
+    <view class="ren" style="display: flex; flex-direction: column">
+    
+    <view >
+      <span bindtap="jiaren2" >+</span>
+      <span bindtap="jianren2">-</span>
+    </view>
+
+    <view  wx:if="{{jiaren2=='true'&&jiaren1=='true'}}" style="display: flex; flex-direction: row">
+        <view class="queren1" bindtap="queren2"  data-id="{{trainList[0]._id}}" data-index2="{{index4}}" data-index="{{index}}">
+          确认
+        </view >
+        <view class="queren1" bindtap="quxiao" data-name="{{username2}}">
+          取消
+        </view >
+      </view> 
+  </view>
+</view>
+
+  <view wx:if="{{jiaren2=='true'&&jiaren1=='true'}}" >
+    <input value="" placeholder="请输入乘客名"  bindinput="input3"/>
+    <input value="" placeholder="请输入身份证号"  bindinput="input4"/>
+
+    <view class="seat">
+      <div>窗</div>
+      <view class="{{index4=='a'?'choose':'nochoose'}}" bindtap="changeCol44" data-index="a">a</view>
+      <view class="{{index4=='b'?'choose':'nochoose'}}" bindtap="changeCol44" data-index="b" style="display:{{flagb}}">b</view>
+      <view class="{{index4=='c'?'choose':'nochoose'}}" bindtap="changeCol44" data-index="c">c</view>
+      <div>过道</div>
+      <view class="{{index4=='d'?'choose':'nochoose'}}" bindtap="changeCol44" data-index="d" style="display:{{flagd}}">d</view>
+      <view class="{{index4=='f'?'choose':'nochoose'}}" bindtap="changeCol44" data-index="f">f</view>
+      <div>窗</div>
+    </view>
+
+  </view>
+
 </view>

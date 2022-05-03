@@ -98,30 +98,16 @@ Page({
     })
   },
   gaiqian(){
+    //获得改签的票的信息
     let e=this.data.train.result.data
-    console.log("我是train",this.data.train)
-    console.log(this.data.id)
-    wx.cloud.callFunction({
-      name:"tuipiao",
-      data:{
-       id:this.data.id 
-      }
-    })
-    .then(res=>{
-       wx.cloud.callFunction({
-         name:"fuyuan",
-         data:{
-          trainNum:e.trainNum,
-          date:e.date,
-          zhan:e.zhan,
-          jideng:this.data.jideng,
-         }
-       })
-    })
-    .then(res=>{
+    let etrainNum=e.trainNum
+    let edate=e.date
+    let ezhan=e.zhan
+   console.log("我是detail",ezhan,edate)
       wx.navigateTo({
-        url:"../gaiqian/gaiqian"
+        //把本次的起点，终点，时间，用户送进去
+        url:"../gaiqian/gaiqian?startSta="+e.startSta+"&endSta="+e.endSta +"&date="+e.date+"&e="+e+"&thisid="+this.data.id+"&thisjideng="+this.data.jideng+"&ezhan="+ezhan+"&edate="+edate+"&etrainNum="+etrainNum
       })
-    })
+
   }
 })

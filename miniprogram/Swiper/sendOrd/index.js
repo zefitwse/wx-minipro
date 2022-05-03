@@ -12,7 +12,7 @@ exports.main = async (e, context) => {
       seatBit:e.seatBit,
       trainNum:e.trainNum,
       username:e.username,
-      // username:"张三",
+ 
       startSta:e.start,
       endSta:e.end,
       date:e.date,
@@ -22,6 +22,7 @@ exports.main = async (e, context) => {
       xiang:e.xiang,
       seat:e.seat,
       trainID:e.id,
+      status:"未出行"
     }
    })
 }

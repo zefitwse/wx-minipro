@@ -3,6 +3,7 @@ var dateTime = require("../../utils/util.js");
 Page({
   data: {
     swiperList: [],
+    swiperList2: [],
     date: new Date(),
     start:"出发站",
     end:"目的站",
@@ -59,10 +60,17 @@ Page({
           this.setData({
             swiperList: res.result.data
           })
+      }),
+      wx.cloud.callFunction({
+        name: 'swiperfun3',
       })
-      .catch(res => {
-        console.log("失败")
-      });
+      .then(res => {
+        console.log("成功", res),
+          this.setData({
+            swiperList2: res.result.data
+          })
+      })
+   
   },
   //选择日期处理函数
   toDate() {
@@ -86,6 +94,19 @@ Page({
         end:this.data.start
       })
   },
+  zhu(){
+    wx.navigateTo({
+      url: '../hotel/jiudian',
+    })
+    
+  },
+  chi(){
+    wx.navigateTo({
+      url: '../chifan/chifan',
+    })
+    
+  },
+
   //发给服务器，服务器将数据送给ticket页面
   formSubmit:function(e){
    

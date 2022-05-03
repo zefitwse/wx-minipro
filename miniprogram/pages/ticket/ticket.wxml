@@ -1,7 +1,7 @@
 <view class="date">
-  <view>前一天</view>
-  <view bindtap='selectTime'>{{date}} △</view>
-  <view>后一天</view>
+
+  <view bindtap='selectTime'>选择日期：{{date}} △</view>
+
 </view>
 
 <view class="content" sytle="height:{{winHeight}}px">
@@ -25,7 +25,9 @@
         </view>
 
         <view class="wrApper right">
-          <view class="blue">{{item.softPrice}}￥</view>
+          <view class="blue" wx:if="{{flag=='xs'}}"><span>{{item.dcprice}}￥(学生)</span></view>
+          <view class="blue" wx:elif="{{flag=='pt'}}"><span>{{item.dcprice}}￥</span></view>
+          <view class="blue" wx:elif="{{flag=='tuan'}}"><span>{{item.dcprice}}(团)￥</span></view>
           <view class="buy">
             可买票
             <form bindsubmit='bindTicket'>

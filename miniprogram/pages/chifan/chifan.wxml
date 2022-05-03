@@ -1,0 +1,29 @@
+<view class="body">
+<view class="head"> 
+  <swiper autoplay interval="3000" indicator-dots  circular duration >
+  <swiper-item wx:for="{{swiperList}}" wx:key="_id" >
+    <image src="{{item.img}}"></image>
+    </swiper-item>
+  </swiper>
+  </view>
+<view class="search">
+ <input bindinput="getSearch" placeholder="请输入"/><image bindtap="sosuo" class="sea_icon" src="../../images/search_icon.png" />
+</view>
+
+<view class="food">
+<view  >
+  <view  class="food1" bindtap="chide" data-kind="chi" ><image class="eat1" src="../../images/eat.jpg"> </image></view>
+  <view  class="food1" bindtap="chide" data-kind="he"><image class="eat1" src="../../images/drink.jpg"></image></view>
+</view>
+<view>
+<view>找吃的</view>
+<view>找喝的</view>
+
+</view>
+  <view class="tuijian">
+    <view >热销推荐</view>
+    <image class="tuijian1" src="https://636c-cloud1-7gy7qesl38f7fd1e-1307802417.tcb.qcloud.la/cloudbase-cms/upload/2022-04-23/6zmw6ovv31q4uj6syv601mma6d36pmsg_.png"></image>
+  </view>
+</view>
+</view>
+ 

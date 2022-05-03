@@ -47,4 +47,24 @@ Page({
       complete: function (res) {},
     })
   },
+  trainorder(){
+    wx.switchTab({
+      url: '../order/order',
+    })
+  },
+  foodorderTap(){
+    wx.navigateTo({
+      url: '../foodorder/foodorder',
+    })
+  },
+  admin(){
+    wx.navigateTo({
+      url: '../admin/admin',
+    })
+  },
+  face(){
+    wx.navigateTo({
+      url: '../faceEntry/faceEntry',
+    })
+  }
 })

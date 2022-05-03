@@ -8,10 +8,10 @@ cloud.init(
 // 云函数入口函数
 exports.main = async (e, context) => {
 return await cloud.database().collection("order")
-// .where({
-//   // username:"zhangsan"
-//   // openid=e.openid
-// }
+.where({
+  username:e.username,
+  status:e.status,
+})
 .get()
 
 }

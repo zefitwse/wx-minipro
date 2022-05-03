@@ -13,7 +13,7 @@ page{
 .head{
   height: 50%;
   display: flex;
-  /* border: 1px solid black; */
+
 }
 .head swiper{ 
   height: 300rpx;
@@ -35,12 +35,14 @@ image{
   border-radius: 10rpx;
   box-shadow: 3px 3px 3px 3px rgba(161,161,156,0.25);
   font-size: 30rpx;
+
 }
 .leg form{
   flex: 1;
   display: flex;
   flex-direction: column;
   border-color: rgba(211, 163, 163, 0.829);
+  
 }
 form view{
   display: flex;
@@ -68,10 +70,15 @@ justify-content: space-around;
  height: 100%;
  align-items: center;
 }
-checkbox-group{
+radio-group{
+  
   display: flex;
   width: 100%;
   justify-content: space-around;
+  align-items: center
+}
+.chou{
+  font-size: 0;
 }
 .positon input{
   
@@ -114,7 +121,7 @@ button{
 
 .minBox{
  
-  margin-top: 50rpx;
+  margin-top: 250rpx;
   height: 30%;
   width: 100%;
   display: flex;
@@ -123,7 +130,7 @@ button{
   
 }
 .minBox view{
-  width: 25%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content:center;
@@ -132,34 +139,18 @@ button{
   font-size:100rpx;
   flex-direction: column;
 } 
-.zizi{
-  display: flex;
-
-  width: 200rpx;
-}
-/* .Ad{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-}
-
-.Ad :nth-child(1){
-  height: 70rpx;
+.minBox span{
   align-items: center;
-  justify-content: space-between;
+  justify-content:center;
+  width: 25%;
   display: flex;
+  font-size:40rpx;
+  height: 40rpx;
 }
-#p1{
- 
-  font-size: 50rpx;
-  text-align: 50rpx;
+.FONT{
+  text-align: center;
+  font-size: 40rpx;
+  width: 50%;
+  color:#3b84d6;
+
 }
-#p2{
-  font-size: 35rpx;
-  text-align: 50rpx;
-}
-.Ad .p2{
-  flex: 1;
-  /* border-top: 1px solid  rgba(83, 143, 233,0.5); */
-  /* background-color: rgba(161, 161, 161, 0.288); */
-/* } */ 

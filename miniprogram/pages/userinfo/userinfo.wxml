@@ -26,6 +26,7 @@
   </view>
   <view class="divLine"></view>
   <button bindtap="exit" class="btn">退出登录</button>
+  <button bindtap="reset" class="btn">修改密码</button>
 </view>
 
 

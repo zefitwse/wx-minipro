@@ -1,0 +1,19 @@
+<!-- 点餐明细 -->
+<view class="mingxi_title">点餐明细</view>
+<block wx:for="{{cartList}}" wx:key="index">
+	<view class="mingxi_item">
+		<text>{{item.foodname}} X{{item.num}}</text>
+		<text class="base_color">￥{{item.price}}*{{item.num}}</text>
+	</view>
+</block>
+<!-- 总价 -->
+<view class="zongjia">合计：<span>{{totalPrice}}元，{{totalNum}}份</span></view>
+<!-- 分割线 -->
+<view class="base_line_10rpx"></view>
+<!--备注  -->
+<input bindinput="getRemark" placeholder="请输入车厢号座位号" value="{{remarks}}" />
+<view class="footer_box">
+	<button class="all_money" type="primary" size="{{primarySize}}" disabled="{{disabled}}" bindtap="submitOrder">
+		总计：{{totalPrice}}元，{{totalNum}}件</button>
+</view>
+

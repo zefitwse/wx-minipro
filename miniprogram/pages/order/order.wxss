@@ -11,8 +11,52 @@
     color:#ffffff;
     padding-top: 10px
   }
-.seat1{
+  .navbar {
+    display: flex;
+    background: #fff;
 
+  }
+  
+  .none_tab {
+    position: relative;
+    top: 20rpx;
+    color: #999;
+    font-size: 32rpx;
+  }
+  
+  .navbar .item {
+    /* 默认选中菜单 */
+    position: relative;
+    flex: auto;
+    font-size: 37rpx;
+    width: 100rpx;
+  
+    line-height: 80rpx;
+    color: #333;
+    border-bottom: 6rpx solid #ddd;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  
+  .navbar .item.active {
+    /* 选中菜单样式 */
+    color: #333;
+    border-bottom: 6rpx solid #d66058;
+ 
+  }
+    
+  .navbar .item.active:after {
+    /* 字体 */
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rpx;
+  }
+.seat1{
   display: flex;
   justify-content:space-around;
 }

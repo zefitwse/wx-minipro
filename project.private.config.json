@@ -1,15 +1,6 @@
 {
   "setting": {},
   "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
@@ -71,8 +62,47 @@
           "pathName": "pages/ceshi",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/realgai/realgai",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/gaiqian/gaiqian",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/foodorder/foodorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/houchu/houchu",
+          "query": "name=limit&toux=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FQ0j4TwGTfTLia1ibrNGcf2JXPHIqHMibSKezDdPZ52BZths7mibRYUqoF0IdibWyVE0jjGGx11ZuRPibrZTWaPdiak6oQ%2F132",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/faceEntry/faceEntry",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/reset/reset",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
-  }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }

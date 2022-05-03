@@ -1,5 +1,8 @@
 /**app.wxss**/
 @import "./fontsize1.wxss";
+page{
+  background-image: url(https://636c-cloud1-7gy7qesl38f7fd1e-1307802417.tcb.qcloud.la/background.jpg);
+}
 .container {
   display: flex;
   flex-direction: column;

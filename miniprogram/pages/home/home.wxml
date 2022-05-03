@@ -19,29 +19,30 @@
     <view class="positon">
     <!-- 出发站 -->
       <view class="startPos" bindtap="homeSta" >
-        <input name="startStation"  value='{{start}}'></input>
+        <input disabled="input"  name="startStation"  value='{{start}}'></input>
       </view> 
       <!-- 交换 -->
       <view bindtap="change" class="change iconfont icon-a01"  style='color:#7F8389;font-size:60rpx;' ></view>
       <!-- 目的站 -->
       <view class="destPos" bindtap="arrSta" >
-        <input name="endStation" value="{{end}}"></input>
+        <input  disabled="input" name="endStation" value="{{end}}"></input>
       </view> 
     </view>
     <!-- 选择日期 -->
     <view class="date">
       <view bindtap="toDate" >
-        <input name="date" value="{{date}}"></input>            
+        <input disabled="input" name="date" value="{{date}}"></input>            
       </view>
     </view>
     <!-- 查询车票，只看高铁动车、学生票 -->
     <view class="check">
       <button formType="submit" > 查询车票</button>
       <view>
-      <checkbox-group bindchange="checkboxChange">
-        <checkbox  value="dc">只看动车</checkbox>
-        <checkbox value="xs">学生票</checkbox>
-      </checkbox-group>
+      <radio-group bindchange="checkboxChange">
+        <radio  name="1"  value="dc">组团购</radio>
+        <radio  name="1" value="xs">学生票</radio>
+        <radio class="chou" name="1" value="pt" checked="true" style="transform: scaleY(0.3);" ></radio>普通用户
+      </radio-group> 
         
       </view>
   </view>
@@ -49,17 +50,20 @@
   </view>
 <!-- 精灵图 -->
   <view class="minBox "> 
-    <view class="iconfont icon-a02 ">
-      <view class="zizi" style="font-size: 30rpx;"></view>
-    </view>
-    <view class="iconfont icon-a03"></view>
-    <view class="iconfont icon-a04"></view>
-    <view class="iconfont icon-a05"></view>
-    <view class="iconfont icon-a06"></view>
-    <view class="iconfont icon-a07"></view>
-    <view class="iconfont icon-a08"></view>
-    <view class="iconfont icon-a09"></view>
-  </view>
+    <view bindtap="zhu" class="iconfont icon-a04"></view>
+    <view bindtap="chi" class="iconfont icon-a05"></view>
+ 
+    <p class="FONT">酒店住宿</p>
+    <p class="FONT">高铁餐厅</p>
 
+  </view>
+  <swiper interval="3000" indicator-dots  circular duration >
+  <swiper-item wx:for="{{swiperList2}}" wx:key="_id" >
+   
+    <image src="{{item.lb}}"> 
+    </image>
+   
+  </swiper-item>
+  </swiper>
   
 </view>

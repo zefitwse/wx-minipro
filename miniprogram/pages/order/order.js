@@ -1,9 +1,28 @@
 var app = getApp();
+let orderStatus = "未出行"; 
 Page({
   data: {
     orderTicket:{},
+    navbar: ["未出行",  "已完成"],
+  },
+  navbarTap: function (e) {
+    let index = e.currentTarget.dataset.idx;
+    this.setData({
+      currentTab: index
+    })
+    if (index == 0) {
+      orderStatus = "未出行";
+    } else if (index == 1) {
+      orderStatus = "已完成";
+    } else {
+      orderStatus = "未出行";
+    }
+    this.showpage()
   },
 onShow:function () {
+  this.showpage()
+},
+showpage(){
   if(app.globalData.hasLogin==false){
     wx.showModal({
       title:"未登录",
@@ -22,11 +41,13 @@ onShow:function () {
   }
   else{
       wx.cloud.callFunction({
-        name:"confirmOrder2"
+        name:"confirmOrder2",
+        data:{
+          status:orderStatus,
+          username:app.globalData.username
+        }
       })
-      // .where({
-      //   username:"zhangsan"
-      // })
+    
       .then(res=>{
         console.log("拿到的数据",res.result.data)
         this.setData({
@@ -36,22 +57,7 @@ onShow:function () {
     
   }
 },
-//   onLoad: function () {
-//     if(app.globalData.hasLogin==true){
-//     wx.cloud.callFunction({
-//       name:"confirmOrder2"
-//     })
-//     // .where({
-//     //   username:"zhangsan"
-//     // })
-//     .then(res=>{
-//       console.log("拿到的数据",res.result.data)
-//       this.setData({
-//         orderTicket:res.result.data
-//       })
-//     })
-//   }
-// },
+
   check(e){
     console.log("check",e.currentTarget.dataset)
   

@@ -21,6 +21,8 @@ onShow(){
 exit(){
   console.log("我是user",this.data.user)
   wx.clearStorageSync()
+  app.globalData.username="未登录"
+  app.globalData.hasLogin=false
   wx.showToast({
     title: '退出登录成功',
     icon: 'none',
@@ -34,7 +36,13 @@ exit(){
        }, 2000);
     }
  })
+},
+reset(){
+  wx.navigateTo({
+    url: '../reset/reset',
+  })
 }
+
 
   
 })

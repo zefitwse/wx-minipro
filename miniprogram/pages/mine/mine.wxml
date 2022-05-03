@@ -20,9 +20,15 @@
       <view>
         <image src="../../images/icon/grzx/qbdd.jpg" style="width:22px;  height:25px;"></image>
       </view>
-      <view bindtap='orderTap'>全部订单</view>
+      <view bindtap='trainorder'>车票订单</view>
+    
     </view>
-
+    <view class="desc">
+      <view>
+        <image src="../../images/order-fill.png" style="width:22px;  height:25px;"></image>
+      </view>
+      <view bindtap='foodorderTap'>点餐订单</view>
+    </view>
   </view>
 
   <!-- 列表导航设计 -->
@@ -66,7 +72,24 @@
 <button class="opr" open-type="feedback">意见反馈></button> 
 
 </view>
+<view class="item">
+<view class="icon"><image src="../../images/icon/grzx/cpyj.jpg" style="width:22px;height:21px;"></image></view>
+<view class="itemName">
+<view>管理员入口</view>
+</view>
 
+<button class="opr" bindtap="admin">登录></button> 
+
+</view>
+<view class="item">
+<view class="icon"><image src="../../images/icon/grzx/cpyj.jpg" style="width:22px;height:21px;"></image></view>
+<view class="itemName">
+<view>人脸验证</view>
+</view>
+
+<button class="opr" bindtap="face">验证></button> 
+
+</view>
 <view class="hr"></view>
 
 

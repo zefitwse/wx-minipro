@@ -1,0 +1,23 @@
+<view class="container">
+  <view bindtap="jiu1" data-src="http://www.huahotel.com/">
+    <image src="https://636c-cloud1-7gy7qesl38f7fd1e-1307802417.tcb.qcloud.la/01.jpg" />
+    <view class="jiu">华轩里酒店集团</view>
+    <view class="jiu">五星级别享受</view>
+
+  </view>
+  <view bindtap="jiu1" data-src="https://www.kaiyuanhotels.com/">
+    <image src="https://636c-cloud1-7gy7qesl38f7fd1e-1307802417.tcb.qcloud.la/02.png" />
+    <view class="jiu">开元酒店集团</view>
+    <view class="jiu">五星级别享受</view>
+  </view>
+  <view bindtap="jiu1" data-src="https://www.huazhu.com/">
+    <image src="https://636c-cloud1-7gy7qesl38f7fd1e-1307802417.tcb.qcloud.la/03.png" />
+    <view class="jiu">华住会酒店集团</view>
+    <view class="jiu">五星级别享受</view>
+  </view>
+  <view bindtap="jiu1" data-src="https://www.shangri-la.com/cn/">
+    <image src="https://636c-cloud1-7gy7qesl38f7fd1e-1307802417.tcb.qcloud.la/04.png" />
+    <view class="jiu">香格里拉酒店集团</view>
+    <view class="jiu">五星级别享受</view>
+  </view>
+</view>

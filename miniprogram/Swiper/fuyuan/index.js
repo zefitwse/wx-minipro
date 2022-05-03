@@ -8,14 +8,14 @@ exports.main = async (e, context) => {
   const _ = cloud.database().command
   // e里面有trainNum  date zhan    jideng
   await cloud.database().collection("trainList").where({
-    // trainNum:e.trainNum,
-    trainNum: "G2575",
-    // date:e.date,
+    trainNum:e.trainNum,
+
+    date:e.date,
   }).update({
     data: {
       // bitzhan:与运算
       numzhan: _.bit({
-        // and:e.zhan, and后面是数字类型
+       
         and: parseInt(e.zhan)
       })
     }
@@ -25,7 +25,7 @@ exports.main = async (e, context) => {
   // 如果是特等
   if(e.jideng=="特"){
   await cloud.database().collection("trainList").where({
-      // trainNum: "G2575",
+
       trainNum:e.trainNum,
       date:e.date,
       numzhan: _.neq(10)
@@ -38,11 +38,8 @@ exports.main = async (e, context) => {
 //给与运算后的数据还原
  await cloud.database().collection("trainList").where({
         trainNum:e.trainNum,
-        // trainNum: "G2575",
         date:e.date,
-        // zhan: a.data[i].zhan
         zhan:"111"
-       
       })
       .update({
         data:{
@@ -52,11 +49,8 @@ exports.main = async (e, context) => {
 
       await cloud.database().collection("trainList").where({
         trainNum:e.trainNum,
-        // trainNum: "G2575",
         date:e.date,
-        // zhan: a.data[i].zhan
         zhan:"110"
-       
       })
       .update({
         data:{
@@ -65,9 +59,7 @@ exports.main = async (e, context) => {
       }) 
       await cloud.database().collection("trainList").where({
         trainNum:e.trainNum,
-        // trainNum: "G2575",
         date:e.date,
-        // zhan: a.data[i].zhan
         zhan:"011"
        
       })
@@ -91,9 +83,9 @@ exports.main = async (e, context) => {
     })
     await cloud.database().collection("trainList").where({
       trainNum:e.trainNum,
-      // trainNum: "G2575",
+    
       date:e.date,
-      // zhan: a.data[i].zhan
+    
       zhan:"111"
      
     })
@@ -105,9 +97,9 @@ exports.main = async (e, context) => {
 
     await cloud.database().collection("trainList").where({
       trainNum:e.trainNum,
-      // trainNum: "G2575",
+
       date:e.date,
-      // zhan: a.data[i].zhan
+
       zhan:"110"
      
     })
@@ -118,9 +110,9 @@ exports.main = async (e, context) => {
     }) 
     await cloud.database().collection("trainList").where({
       trainNum:e.trainNum,
-      // trainNum: "G2575",
+   
       date:e.date,
-      // zhan: a.data[i].zhan
+
       zhan:"011"
      
     })
@@ -142,9 +134,9 @@ exports.main = async (e, context) => {
     })
     await cloud.database().collection("trainList").where({
       trainNum:e.trainNum,
-      // trainNum: "G2575",
+
       date:e.date,
-      // zhan: a.data[i].zhan
+
       zhan:"111"
      
     })
@@ -156,9 +148,9 @@ exports.main = async (e, context) => {
 
     await cloud.database().collection("trainList").where({
       trainNum:e.trainNum,
-      // trainNum: "G2575",
+
       date:e.date,
-      // zhan: a.data[i].zhan
+
       zhan:"110"
      
     })
@@ -169,9 +161,9 @@ exports.main = async (e, context) => {
     }) 
     await cloud.database().collection("trainList").where({
       trainNum:e.trainNum,
-      // trainNum: "G2575",
+
       date:e.date,
-      // zhan: a.data[i].zhan
+
       zhan:"011"
      
     })

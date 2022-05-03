@@ -1,3 +1,10 @@
+<view class="navbar">
+	<lable wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique"
+		bindtap="navbarTap">
+		<text>{{item}}</text>
+	</lable>
+</view>
+
 <view class="content" sytle="height:{{winHeight}}px">
   <block wx:for="{{orderTicket}}" wx:key="1">
   <view class="bg" bindtap="check" data-seatBit="{{item.seatBit}}" data-id="{{item._id}}" data-trainid="{{item.trainID}}"data-jideng="{{item.jideng}}"  >
@@ -20,6 +27,7 @@
         </view>
 
       <view class="wrApper right">
+        <view>{{item.status}}</view>
         <view class="buy" >
          查看详情
         </view>
